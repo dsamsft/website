@@ -17,4 +17,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.15
+          cache-dependency-path: website/package-lock.json
+      - run: npm ci
+      - run: cd website
+      - run: yarn
       - run: yarn build
