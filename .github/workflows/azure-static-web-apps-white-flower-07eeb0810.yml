@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: 16.15
           cache-dependency-path: website/package-lock.json
-      - run: cd website
+      - run: ls
       - run: npm ci
       - run: yarn
       - run: yarn build
