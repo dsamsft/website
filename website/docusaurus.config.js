@@ -3,7 +3,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 const config = {
   title: 'David Sanchez',
-  tagline: 'Personal Website under construction.',
+  tagline: 'I am here to help you build the best apps on top of Azure.',
   url: 'https://dsamsft.net',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -14,14 +14,44 @@ const config = {
 
   presets: [
     [
-      'classic',
-      ({        
+      '@docusaurus/preset-classic',
+      {        
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }),
+        googleAnalytics: {
+          trackingID: 'G-18J431S7WG',
+          anonymizeIP: true,
+        },
+        
+      },
     ],
   ],
+
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'es', 'pt'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en-US',
+        calendar: 'gregory',
+      },
+      es: {
+        label: 'Español',
+        direction: 'ltr',
+        htmlLang: 'es-es',
+        calendar: 'gregory',
+      },
+      fa: {
+        label: 'Portugues',
+        direction: 'ltr',
+        htmlLang: 'pt-Br',
+        calendar: 'gregory',
+      },
+    },
+  },
 
   themeConfig:
     ({
@@ -68,11 +98,15 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
+          /**{
+            type: 'localeDropdown',
+            position: 'right',
+          },*/          
         ],
       },
       footer: {
         style: 'dark',        
-        copyright: `Copyright © ${new Date().getFullYear()} David Sanchez. Built with Docusaurus. Running on Azure Static Web Sites.`,
+        copyright: `Copyright © ${new Date().getFullYear()} David Sanchez. Built with <a href='https://docusaurus.io/' target='_blank'>Docusaurus</a>. Running on <a href='https://aka.ms/staticwebapps' target='_blank'>Azure Static Web Apps</a>.`,
       },
       prism: {
         theme: lightCodeTheme,

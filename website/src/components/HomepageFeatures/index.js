@@ -1,35 +1,12 @@
 import React from 'react';
-import clsx from 'clsx';
-import styles from './styles.module.css';
-
-const FeatureList = [
-  
-];
-
-function Feature({Svg, title, description}) {
-  return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
-}
+import ConferenciaImageUrl from '@site/static/img/Conferencia.jpg';
 
 export default function HomepageFeatures() {
-  return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
-        </div>
+  return (     
+      <div class="indexText">
+        I work at Microsoft as Localization Program Manager for Spanish & Portuguese. I was born and raised in Costa Rica. I moved to Washington, USA in 2018. I joined Microsoft in 2015. Before joining Microsoft, I was a <a href="https://mvp.microsoft.com/en-us/PublicProfile/5000234" target="_blank">Microsoft Most Valuable Professional</a>, now I'm part of the MVP Reconnect program. I graduated from Computer Systems Engineer and finishing a Master degree for Information Technology Management. Most of my experience is about Software Development and Collaboration Platforms. I am Microsoft Certified Professional and Trainer, some of my certifications are: Azure Developer Associate, Azure DevOps Engineer Expert and Azure Fundamentals including AI & Data.
+        <img src={ConferenciaImageUrl} alt="David Sanchez giving a conference about DevOps"/>
+        <p class="indexFooter">I hope you find the information on this website helpful and it can help you to learn and achieve more. Thank you for visiting.</p>
       </div>
-    </section>
   );
 }
